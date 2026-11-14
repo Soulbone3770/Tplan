@@ -19,6 +19,9 @@ const Index = () => {
                 <Link to="/users/login" className="nav-btn">
                      Inicia Sesión
                 </Link>
+                <Link to="/tasks/view" className="nav-btn">
+                    Ir a las tareas
+                </Link>
             </div>
         </div>
     );
