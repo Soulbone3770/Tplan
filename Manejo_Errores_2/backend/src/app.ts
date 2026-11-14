@@ -10,7 +10,7 @@ const app: Application = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: ["http://localhost:5173", "https://tplan-71zk.onrender.com", "https://tplan-1.onrender.com"],
+    origin: ["http://localhost:5173", "https://tplan-1.onrender.com"],
     credentials: true
 }));
 app.use(cookieParser());
