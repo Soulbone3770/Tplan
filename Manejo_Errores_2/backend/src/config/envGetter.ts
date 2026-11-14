@@ -19,8 +19,9 @@ const envGetter = () => {
     const DATABASE = getter("DB_DATABASE");
     const PORT = getter("PORT");
     const JWT_SECRET_KEY = getter("JWT_SECRET_KEY");
+    const DB_PORT = getter("DB_PORT");
 
-    return { DB_HOST, DB_USER, DB_PASSWORD, DATABASE, PORT, JWT_SECRET_KEY };
+    return { DB_HOST, DB_USER, DB_PORT, DB_PASSWORD, DATABASE, PORT, JWT_SECRET_KEY };
 
 };
 

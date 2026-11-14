@@ -20,7 +20,9 @@
     "tsx": "^4.23.15"
   },
   "scripts": {
-    "uwu": "nodemon --exec tsx src/server.ts"
+    "uwu": "nodemon --exec tsx src/server.ts",
+    "build": "tsc",
+    "start": "tsx src/server.ts"
   },
   "type": "module"
 }
