@@ -4,6 +4,7 @@ import UsersRouter from "./UsersRouter";
 import Index from "../pages/Index";
 import NoEncontradoPage from "../pages/NoEncontradoPage";
 import TasksRouter from "./TasksRouter";
+import { ProtectedRoute } from "../features/auth";
 
 const AppRouter = () => {
     return (
@@ -11,7 +12,11 @@ const AppRouter = () => {
             <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/users/*" element={<UsersRouter />} />
-                <Route path="/tasks/*" element={<TasksRouter />} />
+                <Route path="/tasks/*" element={
+                    <ProtectedRoute>
+                        <TasksRouter />
+                    </ProtectedRoute>
+                }/>
                 <Route path="*" element={<NoEncontradoPage />} />
             </Routes>
         </BrowserRouter>
