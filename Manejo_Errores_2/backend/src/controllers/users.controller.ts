@@ -21,7 +21,7 @@ const usersController = {
 
         const { token, maxAge } = await usersService.createSesion(req.body);
 
-        res.cookie("token", token, {httpOnly: true, maxAge: maxAge});
+        res.cookie("token", token, {httpOnly: true, maxAge: maxAge, secure: process.env.NODE_ENV === "production", sameSite: process.env.NODE_ENV === "production" ? "none" : "lax"});
 
         res.status(200).json({
             ok: true
