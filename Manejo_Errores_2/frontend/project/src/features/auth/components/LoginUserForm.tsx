@@ -20,7 +20,7 @@ const LoginUserForm = () => {
             await authCheck();
             resetForm();
             alert("Iniciaste sesión correctamente");
-            navigate("/tasks/view");
+            navigate("../../tasks/view");
         }
     }
 

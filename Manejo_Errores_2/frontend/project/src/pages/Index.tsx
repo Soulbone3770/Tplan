@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
+import useAuth from "../shared/hooks/useAuth";
+import { useEffect } from "react";
 
 const Index = () => {
+
+    const { autenticado } = useAuth();
+    useEffect(() => {
+        console.error(autenticado);
+    },[autenticado]);
+
     return (
         <div style={{ textAlign: 'center', width: '100%' }}>
 
